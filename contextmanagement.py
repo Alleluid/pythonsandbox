@@ -21,7 +21,5 @@ with Timer() as timer:
     _ = [i ** i for i in range(1, 1_000)]
 
 with Timer() as timer2:
-    for i in itertools.:
+    for i in itertools.accumulate(range(1000)):
         print(i)
-
-"stasd".star
