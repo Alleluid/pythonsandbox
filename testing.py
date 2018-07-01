@@ -2,8 +2,29 @@ import itertools as itl
 import collections
 import string
 
-my_tup = collections.namedtuple("my_tup", ("a", "b", "c", "x"))
-ord_dict = collections.OrderedDict((a, b) for a, b in zip(string.ascii_uppercase, itl.count()))
 
-for k, v in ord_dict.items():
-    print(f"key: {k}, value: {v}")
+def logtype(func):
+    def wrapper(*args):
+        original = func(*args)
+        print(f"{func.__name__}: {type(original)}")
+        return original
+    return wrapper
+
+@logtype
+def adder(a, b):
+    return a+b
+
+# print(adder(2, 4))
+
+class ReprTest:
+    def __init__(self):
+        self.string = "string"
+        self.represent = "repr"
+
+    def __str__(self):
+        return self.string
+
+    def __repr__(self):
+        return self.represent
+
+print(ReprTest())
