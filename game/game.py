@@ -21,17 +21,24 @@ class Application(Frame):
             btn_ok = Button(self, text="OK!" + str(i), command=cmd(print, "Yes!", i))
             btn_ok.grid()
 
-        menubar = Menu(self)
+        # Not working, idk what to add it to in this method.
+        self.menubar = Menu(self)
 
-        app_menu = Menu(menubar)
+        app_menu = Menu(self.menubar)
         app_menu.add_command(label="Quit", command=self.quit)
 
-        menubar.add_cascade(label="App", menu=app_menu)
-        self.config(menu=menubar)
-
+        self.menubar.add_cascade(label="App", menu=app_menu)
 
 
 def cmd(func, *args, **kwargs):
+    """
+    Creates reference to function with specified params.
+    :param func:
+    :param args:
+    :param kwargs:
+    :return:
+    """
+
     def wrapper():
         func(*args, **kwargs)
 
@@ -47,5 +54,5 @@ def run_app():
 
 
 if __name__ == '__main__':
-    print("Ran Game.py")
+    print("Ran game.py")
     run_app()
