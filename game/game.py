@@ -13,12 +13,22 @@ class Application(Frame):
     def __init__(self, master=None):
         Frame.__init__(self, master)
         self.grid()
-        self.create_widgets()
+        self.create_widgets(master)
 
-    def create_widgets(self):
+
+    def create_widgets(self, master):
         for i in range(5):
-            self.btn_ok = Button(self, text="OK!" + str(i), command=cmd(print, "Yes!", i))
-            self.btn_ok.grid()
+            btn_ok = Button(self, text="OK!" + str(i), command=cmd(print, "Yes!", i))
+            btn_ok.grid()
+
+        menubar = Menu(self)
+
+        app_menu = Menu(menubar)
+        app_menu.add_command(label="Quit", command=self.quit)
+
+        menubar.add_cascade(label="App", menu=app_menu)
+        self.config(menu=menubar)
+
 
 
 def cmd(func, *args, **kwargs):
@@ -31,6 +41,7 @@ def cmd(func, *args, **kwargs):
 def run_app():
     app = Application()
     app.master.title("OK!")
+    app.master.geometry("1200x720")
     app.master.config(width=1000, height=1000)
     app.mainloop()
 
