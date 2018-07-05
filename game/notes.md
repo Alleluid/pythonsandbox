@@ -35,6 +35,14 @@ for a character that is smart and a little strong. Lower = better feels wrong th
 Could this work with another system? Maybe a difficulty system? If low is better, we could set the difficulty as a number 
 where higher = harder.
 
+To keep in mind: 
+>
+* Does a low-stat character still have a chance at exceptionally good result? To what degree?
+* Does a high-stat characters still have a chance of failure? To what degree?
+* What should the chances of exceptional or critical failure be compared to normal failure? Does this vary with skill or ability?
+* What should the chances of exceptional or critical success be compared to normal success? Does this vary with skill or ability?
+
+
 ## Character Attributes
 I was first going to go with the classic `str`, `int`, `chr`, and `wis`. But `str` and `int` are reserved words in Python,
 and it could be fun to mix it up. Right now I'm thinking Power (`pow`), Brain (`brn`), Social (`soc`), and Agility (`agi`)
