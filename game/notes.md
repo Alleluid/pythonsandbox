@@ -7,7 +7,7 @@ Some info from here: http://www.darkshire.net/jhkim/rpg/systemdesign/dice-method
 ## Dice Rolls 
 _bell-curve(`3d6`) vs linear(`1d20`)_  
 linear is going to have totally even distribution;
-bell curve has more focused on the high end and low end.
+bell curve has less on the high end and low end.
 
 from Darkshire:  
 
