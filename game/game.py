@@ -5,7 +5,7 @@ import collections
 class TextGame:
     # Constants:
     class Stats:
-        NAMES = ("pow", "brn", "wis", "agi")
+        NAMES = ("pow", "brn", "soc", "agi")
 
         def __init__(self, pow=10):
             pass
