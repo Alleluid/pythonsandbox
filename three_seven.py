@@ -29,10 +29,10 @@ class People:
 
 def test():
     people_list = People()
-    bob = people_list.bob
-    bob.age = 24
+    people_list.bob.age = 24
+    people_list.fred.age = 43
+    people_list.steve.age = 64
     print(people_list)
-
 
 
 if __name__ == '__main__':
