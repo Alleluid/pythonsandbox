@@ -1,10 +1,10 @@
 def play(num):
-    pass
 
 
-def main():
+
+def testing():
     play(100)
 
 
 if __name__ == '__main__':
-    main()
+    testing()
