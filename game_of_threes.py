@@ -15,7 +15,10 @@ def play(num):
 
 
 def testing():
-    play(100)
+    print("Game of Threes")
+    while True:
+        number = int(input("> "))
+        play(number)
 
 
 if __name__ == '__main__':
